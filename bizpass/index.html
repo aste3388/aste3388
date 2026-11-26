@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>아성 AI 비즈패스 | BizPass — 사업자 맞춤 정책자금·지원사업 진단</title>
+<meta name="description" content="사업자등록번호와 대표자 정보만 입력하면 정책자금·특례보증·정부 지원사업을 한 번에 진단하고, 필요 서류 체크리스트와 접수 지원까지 연결합니다. 유한회사 아성투에버 아성 AI 비즈패스." />
+<meta name="theme-color" content="#0D2920" />
+<meta property="og:title" content="아성 AI 비즈패스 | BizPass" />
+<meta property="og:description" content="사업자 맞춤 정책자금·특례보증·지원사업 1차 진단 + 필요 서류 안내 + 제휴 전문가 접수 지원" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="assets/orig-symbol.png" />
+<link rel="stylesheet" href="style.css" />
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<!-- ============ 상단 유틸리티 바 ============ -->
+<div class="utilbar">
+  <div class="wrap utilbar__inner">
+    <p>유한회사 아성투에버 · 아성 AI 비즈패스(BizPass)</p>
+    <a href="tel:01028292837"><span class="dot" aria-hidden="true"></span>대표 직통 <strong>010-2829-2837</strong></a>
+  </div>
+</div>
+
+<!-- ============ 헤더 ============ -->
+<header class="header" id="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#top" aria-label="아성 AI 비즈패스 홈으로">
+      <img class="brand__img brand__img--dark" src="assets/orig-horizontal-dark.png" alt="ASUNG TWOEVER — 유한회사 아성투에버" />
+      <img class="brand__img brand__img--light" src="assets/orig-horizontal-light.png" alt="" aria-hidden="true" />
+      <span class="brand__div" aria-hidden="true"></span>
+      <span class="brand__product">BIZ<em>PASS</em></span>
+    </a>
+
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#diagnose" class="nav__link">맞춤 진단</a>
+      <a href="#pool" class="nav__link">지원사업</a>
+      <a href="#documents" class="nav__link">서류·접수</a>
+      <a href="#process" class="nav__link">진행 절차</a>
+      <a href="#contact" class="nav__link">상담</a>
+    </nav>
+
+    <div class="header__actions">
+      <a class="btn btn--ghost btn--sm header__tel" href="tel:01028292837">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="ico"><path d="M6.6 10.8c1.5 2.9 3.7 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2.2 2.3z"/></svg>
+        010-2829-2837
+      </a>
+      <a class="btn btn--gold btn--sm" href="#diagnose">무료 진단</a>
+      <button class="hamburger" id="hamburger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu__head">
+    <span class="mobile-menu__title">MENU</span>
+    <button class="mobile-menu__close" type="button" id="menuClose" aria-label="메뉴 닫기">&times;</button>
+  </div>
+  <nav class="mobile-menu__nav" aria-label="모바일 메뉴">
+    <a href="#diagnose"><span>01</span>맞춤 진단</a>
+    <a href="#result"><span>02</span>진단 결과</a>
+    <a href="#documents"><span>03</span>서류·접수</a>
+    <a href="#pool"><span>04</span>지원사업</a>
+    <a href="#process"><span>05</span>진행 절차</a>
+    <a href="#contact"><span>06</span>상담</a>
+  </nav>
+  <div class="mobile-menu__foot">
+    <a class="btn btn--gold btn--block" href="tel:01028292837">대표 직통 010-2829-2837</a>
+    <a class="btn btn--line btn--block" href="#diagnose">무료 진단 시작</a>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ============ 히어로 ============ -->
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow eyebrow--light"><span class="eyebrow__rule"></span>ASUNG AI BIZPASS · 정책자금 통합 진단</p>
+      <h1 class="hero__title">
+        사업자등록번호 하나로,<br />
+        받을 수 있는 지원을 <em>한 번에</em>.
+      </h1>
+      <p class="hero__lead">
+        정책자금·특례보증·정부 지원사업을 대표자의 성별·나이와 사업 조건에 맞춰 1차 진단합니다.
+        결과와 함께 필요 서류 체크리스트를 만들고, 제휴 세무·행정 전문가의 접수 지원까지 연결합니다.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--gold" href="#diagnose">60초 무료 진단 시작</a>
+        <a class="btn btn--outline-light" href="#pool">지원사업 15종 보기</a>
+      </div>
+      <ul class="hero__points">
+        <li>사업자번호 자동 검증</li>
+        <li>청년·여성·중장년 우대 자동 판별</li>
+        <li>서류 체크리스트 자동 생성</li>
+      </ul>
+    </div>
+
+    <div class="hero__visual" aria-hidden="true">
+      <div class="mock">
+        <div class="mock__head">
+          <span class="mock__dot"></span>
+          <span class="mock__title">BizPass 진단 리포트</span>
+          <span class="mock__tag">1차 진단</span>
+        </div>
+        <div class="mock__biz">사업자등록번호 <b>123-45-67891</b></div>
+        <div class="mock__chips">
+          <span class="chip chip--green">외식업</span>
+          <span class="chip chip--gold">여성 대표</span>
+          <span class="chip chip--gold">만 35세 · 청년</span>
+        </div>
+        <div class="mock__bars">
+          <div class="mock__bar"><span style="width:88%"></span><i>청년전용 창업자금</i><b>추천</b></div>
+          <div class="mock__bar"><span style="width:76%"></span><i>지역신보 특례보증</i><b>추천</b></div>
+          <div class="mock__bar"><span style="width:64%"></span><i>스마트상점 기술보급</i><b>검토</b></div>
+          <div class="mock__bar"><span style="width:52%"></span><i>경영개선 컨설팅</i><b>검토</b></div>
+        </div>
+        <div class="mock__foot">
+          <span>매칭 11건</span><span>필요 서류 9종</span><span>접수 지원 가능</span>
+        </div>
+      </div>
+      <div class="hero__badge">
+        <b>3 STEP</b>
+        <span>진단 → 서류 → 접수 지원</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <dl class="stats">
+      <div class="stats__item"><dt>진단 상품</dt><dd><span class="stats__num" id="statCount">15</span><span class="stats__unit">종</span></dd></div>
+      <div class="stats__item"><dt>진단 소요</dt><dd><span class="stats__num">60</span><span class="stats__unit">초</span></dd></div>
+      <div class="stats__item"><dt>진행 단계</dt><dd><span class="stats__num">3</span><span class="stats__unit">단계</span></dd></div>
+      <div class="stats__item"><dt>전문가 연계</dt><dd><span class="stats__num stats__num--word">MOU</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ STEP 1 · 맞춤 진단 ============ -->
+<section class="section section--ivory" id="diagnose">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="eyebrow"><span class="eyebrow__rule"></span>STEP 01 · DIAGNOSIS</p>
+      <h2 class="section__title">맞춤 진단 입력</h2>
+      <p class="section__desc">
+        사업자등록번호와 대표자 정보, 사업 기본 조건만 입력하면 됩니다.
+        입력값은 브라우저 안에서만 진단에 사용되며 서버에 저장되지 않습니다.
+      </p>
+    </div>
+
+    <ol class="stepper" aria-label="진행 단계">
+      <li class="stepper__item is-active" id="stepper1"><span class="stepper__no">01</span><span class="stepper__txt"><b>맞춤 진단</b><i>사업자·대표자 정보</i></span></li>
+      <li class="stepper__item" id="stepper2"><span class="stepper__no">02</span><span class="stepper__txt"><b>결과 확인</b><i>정책자금·지원사업 매칭</i></span></li>
+      <li class="stepper__item" id="stepper3"><span class="stepper__no">03</span><span class="stepper__txt"><b>서류·접수</b><i>체크리스트·접수 지원</i></span></li>
+    </ol>
+
+    <form class="card formcard reveal" id="diagnoseForm" novalidate>
+      <div class="formcard__head">
+        <div>
+          <h3 class="formcard__title">사업 정보 입력</h3>
+          <p class="formcard__sub"><span class="req-mark">*</span> 표시는 필수 입력입니다.</p>
+        </div>
+        <button class="btn btn--line btn--sm" type="button" id="exampleBtn">예시로 채워보기</button>
+      </div>
+
+      <!-- 사업자등록번호 -->
+      <div class="field field--biz">
+        <label class="field__label" for="bizNo">사업자등록번호 <span class="req-mark">*</span></label>
+        <div class="field__row">
+          <div class="biz-input">
+            <input id="bizNo" name="bizNo" type="text" inputmode="numeric" autocomplete="off"
+                   placeholder="000-00-00000" maxlength="12" aria-describedby="bizMsg" />
+            <span class="biz-input__state" id="bizState" aria-hidden="true"></span>
+          </div>
+          <button class="btn btn--ghost btn--sm" type="button" id="exampleBizBtn">테스트 번호</button>
+        </div>
+        <p class="field__msg" id="bizMsg" role="status">숫자 10자리를 입력하면 자동으로 형식이 맞춰지고 검증 숫자를 확인합니다.</p>
+      </div>
+
+      <!-- 대표자 -->
+      <fieldset class="fieldset">
+        <legend class="fieldset__legend">대표자 정보</legend>
+
+        <div class="field-grid">
+          <div class="field">
+            <span class="field__label" id="genderLabel">성별 <span class="req-mark">*</span></span>
+            <div class="seg" role="radiogroup" aria-labelledby="genderLabel">
+              <label class="seg__btn"><input type="radio" name="gender" value="male" checked /><span>남성</span></label>
+              <label class="seg__btn"><input type="radio" name="gender" value="female" /><span>여성 <i>우대</i></span></label>
+            </div>
+            <p class="field__msg">여성 대표는 여성기업 우대 상품이 함께 표시됩니다.</p>
+          </div>
+
+          <div class="field">
+            <span class="field__label">대표자 나이 <span class="req-mark">*</span></span>
+            <div class="age">
+              <div class="seg seg--small" role="radiogroup" aria-label="나이 입력 방식">
+                <label class="seg__btn"><input type="radio" name="ageMode" value="birth" checked /><span>출생연도</span></label>
+                <label class="seg__btn"><input type="radio" name="ageMode" value="age" /><span>만 나이</span></label>
+              </div>
+              <div class="age__input">
+                <input id="ageValue" name="ageValue" type="text" inputmode="numeric" maxlength="4" placeholder="예) 1991" />
+                <span class="age__unit" id="ageUnit">년생</span>
+              </div>
+            </div>
+            <p class="field__msg" id="ageMsg" role="status">출생연도를 넣으면 만 나이와 연령 구간을 자동으로 판별합니다.</p>
+          </div>
+        </div>
+
+        <div class="ageband" id="ageBand" aria-live="polite">
+          <span class="ageband__label">연령 구간</span>
+          <div class="ageband__chips">
+            <span class="ageband__chip" data-band="youth">청년 · 만 39세 이하</span>
+            <span class="ageband__chip" data-band="mid">중장년 · 40~59세</span>
+            <span class="ageband__chip" data-band="senior">시니어 · 60세 이상</span>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- 사업 조건 -->
+      <fieldset class="fieldset">
+        <legend class="fieldset__legend">사업 기본 조건</legend>
+        <div class="field-grid field-grid--3">
+          <label class="field">
+            <span class="field__label">업종 <span class="req-mark">*</span></span>
+            <span class="select-wrap">
+              <select id="industry" name="industry">
+                <option value="food">외식 · 음식점</option>
+                <option value="retail">도 · 소매</option>
+                <option value="manufacture">제조 · 가공</option>
+                <option value="service">서비스</option>
+                <option value="fishery">수산 · 농림</option>
+                <option value="construction">건설 · 부동산</option>
+                <option value="etc">기타</option>
+              </select>
+            </span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">업력 <span class="req-mark">*</span></span>
+            <span class="select-wrap">
+              <select id="bizAge" name="bizAge">
+                <option value="pre">예비 창업자</option>
+                <option value="lt1">1년 미만</option>
+                <option value="1to3">1~3년</option>
+                <option value="3to7" selected>3~7년</option>
+                <option value="over7">7년 이상</option>
+              </select>
+            </span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">사업장 지역 <span class="req-mark">*</span></span>
+            <span class="select-wrap">
+              <select id="region" name="region">
+                <option value="metro">수도권 (서울·경기·인천)</option>
+                <option value="city">광역시</option>
+                <option value="province">도 지역 (중소도시·군)</option>
+                <option value="jeju">제주</option>
+              </select>
+            </span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">연매출 구간 <span class="req-mark">*</span></span>
+            <span class="select-wrap">
+              <select id="sales" name="sales">
+                <option value="0.5">5천만 원 미만</option>
+                <option value="1">5천만 ~ 1억 원</option>
+                <option value="3" selected>1억 ~ 3억 원</option>
+                <option value="10">3억 ~ 10억 원</option>
+                <option value="30">10억 ~ 30억 원</option>
+                <option value="99">30억 원 이상</option>
+              </select>
+            </span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">상시근로자 수 <span class="req-mark">*</span></span>
+            <span class="select-wrap">
+              <select id="workers" name="workers">
+                <option value="0">없음 (1인 사업장)</option>
+                <option value="1" selected>1~4명</option>
+                <option value="5">5~9명</option>
+                <option value="10">10~49명</option>
+                <option value="50">50명 이상</option>
+              </select>
+            </span>
+          </label>
+
+          <label class="field">
+            <span class="field__label">창업 형태</span>
+            <span class="select-wrap">
+              <select id="bizType" name="bizType">
+                <option value="sole">개인사업자</option>
+                <option value="corp">법인사업자</option>
+                <option value="prep">예비창업 (사업자 없음)</option>
+              </select>
+            </span>
+          </label>
+        </div>
+      </fieldset>
+
+      <p class="form-error" id="formError" role="alert" hidden></p>
+
+      <div class="formcard__foot">
+        <p class="formcard__note">
+          <b>AI 1차 진단</b>입니다. 실제 지원 가능 여부는 기관 심사·연도별 공고에 따라 달라지며,
+          진단 결과는 상담 시 다시 확인해 드립니다.
+        </p>
+        <button class="btn btn--primary btn--lg" type="submit" id="diagnoseBtn">
+          AI 1차 진단 결과 보기
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="ico"><path d="M4 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ STEP 2 · 진단 결과 ============ -->
+<section class="section section--paper" id="result" hidden>
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="eyebrow"><span class="eyebrow__rule"></span>STEP 02 · MATCHING</p>
+      <h2 class="section__title">진단 결과 · 받을 수 있는 지원</h2>
+      <p class="section__desc" id="resultLead">입력 조건에 맞춰 정책자금·특례보증·지원사업을 매칭했습니다.</p>
+    </div>
+
+    <div class="profile" id="profileBox" aria-live="polite"></div>
+
+    <div class="resultbar">
+      <div class="resultbar__count">
+        <b id="matchCount">0</b><span>건 매칭</span>
+        <i>·</i>
+        <b id="excludeCount">0</b><span>건 조건 미해당</span>
+      </div>
+      <div class="resultbar__actions">
+        <button class="btn btn--ghost btn--sm" type="button" id="reDiagnoseBtn">조건 수정</button>
+        <button class="btn btn--ghost btn--sm" type="button" id="selectAllBtn">추천 전체 선택</button>
+      </div>
+    </div>
+
+    <div class="results" id="resultList"></div>
+
+    <details class="excluded" id="excludedBox">
+      <summary><span class="excluded__sum">조건상 제외된 사업 <b id="excludedNum">0</b>건</span><span class="excluded__hint">제외 사유 확인</span></summary>
+      <ul class="excluded__list" id="excludedList"></ul>
+    </details>
+
+    <div class="nextbar">
+      <div class="nextbar__copy">
+        <b id="selectedSum">선택한 사업 없음</b>
+        <span>사업을 선택하면 공통·사업별 필요 서류 체크리스트가 만들어집니다.</span>
+      </div>
+      <button class="btn btn--primary" type="button" id="toDocsBtn" disabled>선택 사업 서류 준비하기</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STEP 3 · 서류·접수 ============ -->
+<section class="section section--ivory" id="documents" hidden>
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="eyebrow"><span class="eyebrow__rule"></span>STEP 03 · DOCUMENTS &amp; APPLY</p>
+      <h2 class="section__title">필요 서류 체크리스트 · 접수 지원</h2>
+      <p class="section__desc">
+        선택한 사업에 필요한 서류를 한 번에 정리했습니다. 준비된 서류를 체크하고 접수 지원을 신청하면
+        담당자가 확인 후 연락드립니다.
+      </p>
+    </div>
+
+    <div class="docs">
+      <div class="docs__main">
+        <article class="card doccard">
+          <div class="doccard__head">
+            <h3>공통 서류 <span class="count" id="commonCount">0</span></h3>
+            <p>모든 정책자금·보증 신청에 기본으로 필요한 서류입니다.</p>
+          </div>
+          <ul class="checklist" id="commonList"></ul>
+        </article>
+
+        <div id="programDocs"></div>
+      </div>
+
+      <aside class="docs__side">
+        <div class="card progress">
+          <h3>서류 준비율</h3>
+          <div class="progress__bar"><span id="progressFill"></span></div>
+          <p class="progress__num"><b id="progressNum">0</b> / <span id="progressTotal">0</span> 완료</p>
+          <ul class="progress__tips">
+            <li>국세·지방세 완납증명서는 유효기간이 있습니다.</li>
+            <li>부가세 과세표준증명은 최근 확정 신고분 기준입니다.</li>
+          </ul>
+          <a class="btn btn--line btn--block btn--sm" href="tel:01028292837">서류 문의 전화</a>
+        </div>
+
+        <div class="card sumcard" id="summaryCard">
+          <h3>진단 결과 요약</h3>
+          <dl class="sumlist" id="summaryList"></dl>
+        </div>
+      </aside>
+    </div>
+
+    <div class="card applycard" id="applyCard">
+      <div class="applycard__head">
+        <div>
+          <p class="eyebrow"><span class="eyebrow__rule"></span>APPLY</p>
+          <h3>서류 접수 지원 신청</h3>
+          <p>연락처와 희망 상담 시간을 남겨 주시면 접수번호를 발급해 드립니다. 담당자가 확인 후 연락드립니다.</p>
+        </div>
+        <a class="applycard__tel" href="tel:01028292837">
+          <span>대표 직통</span>
+          <b>010-2829-2837</b>
+        </a>
+      </div>
+
+      <form class="form" id="applyForm" novalidate>
+        <div class="field-grid">
+          <label class="field">
+            <span class="field__label">성함 / 담당자 <span class="req-mark">*</span></span>
+            <input type="text" name="name" id="applyName" placeholder="예) 홍길동" autocomplete="name" />
+          </label>
+          <label class="field">
+            <span class="field__label">연락처 <span class="req-mark">*</span></span>
+            <input type="tel" name="phone" id="applyPhone" inputmode="numeric" placeholder="010-0000-0000" maxlength="13" autocomplete="tel" />
+          </label>
+          <label class="field">
+            <span class="field__label">희망 상담 시간 <span class="req-mark">*</span></span>
+            <span class="select-wrap">
+              <select name="time" id="applyTime">
+                <option value="평일 오전 (09:00~12:00)">평일 오전 (09:00~12:00)</option>
+                <option value="평일 오후 (13:00~18:00)">평일 오후 (13:00~18:00)</option>
+                <option value="평일 저녁 (18:00~21:00)">평일 저녁 (18:00~21:00)</option>
+                <option value="토요일 오전">토요일 오전</option>
+                <option value="문자로 먼저 연락">문자로 먼저 연락</option>
+              </select>
+            </span>
+          </label>
+          <label class="field">
+            <span class="field__label">상담 방식</span>
+            <span class="select-wrap">
+              <select name="channel" id="applyChannel">
+                <option value="전화 상담">전화 상담</option>
+                <option value="방문 상담 (안산·송도)">방문 상담 (안산·송도)</option>
+                <option value="카카오톡·문자">카카오톡·문자</option>
+              </select>
+            </span>
+          </label>
+        </div>
+
+        <label class="field">
+          <span class="field__label">추가로 알려주실 내용</span>
+          <textarea name="memo" id="applyMemo" rows="3" placeholder="예) 특례보증 우선 상담, 최근 매출 감소, 서류 발급이 어려운 항목 등"></textarea>
+        </label>
+
+        <label class="agree">
+          <input type="checkbox" id="agreePrivacy" />
+          <span>진단 결과와 상담을 위한 <b>개인정보(성함·연락처·사업 정보)</b> 수집·이용에 동의합니다. 수집한 정보는 상담 목적으로만 사용되며, 요청 시 삭제합니다.</span>
+        </label>
+
+        <p class="form-error" id="applyError" role="alert" hidden></p>
+
+        <div class="applycard__foot">
+          <p>접수 지원은 <b>제휴 세무·행정 전문가 매칭</b>으로 진행되며, 아성투에버가 자격 업무를 직접 대리하지 않습니다.</p>
+          <button class="btn btn--primary btn--lg" type="submit">접수번호 발급받기</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- 접수 완료 -->
+    <div class="card receipt" id="receiptPanel" hidden>
+      <div class="receipt__top">
+        <span class="receipt__check" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <div>
+          <p class="receipt__kicker">접수 지원 신청 완료</p>
+          <h3 class="receipt__title">접수번호가 발급되었습니다.</h3>
+          <p class="receipt__sub">아래 접수번호를 상담 시 알려주시면 바로 확인됩니다. 문자로도 보낼 수 있습니다.</p>
+        </div>
+      </div>
+      <p class="receipt__no" id="receiptNo">BP-00000000-0000</p>
+      <dl class="receipt__meta" id="receiptMeta"></dl>
+      <pre class="receipt__text" id="receiptText"></pre>
+      <div class="receipt__btns">
+        <a class="btn btn--gold" id="receiptSms" href="sms:01028292837">문자로 접수 내용 보내기</a>
+        <button class="btn btn--line" type="button" id="receiptCopy">내용 복사</button>
+        <a class="btn btn--line" href="tel:01028292837">010-2829-2837 전화</a>
+      </div>
+      <p class="receipt__note">
+        이 화면의 접수번호는 현재 브라우저에서 발급된 상담 접수번호입니다.
+        담당자 확인·서류 검토는 영업일 기준 1~2일 내에 순차적으로 진행됩니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 지원사업 풀 ============ -->
+<section class="section section--paper" id="pool">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <p class="eyebrow"><span class="eyebrow__rule"></span>PROGRAM POOL 2026</p>
+      <h2 class="section__title">진단에 사용하는 지원사업</h2>
+      <p class="section__desc">
+        정책자금·특례보증·정부 지원사업 15종을 조건별로 매칭합니다.
+        한도·금리·지원 비율은 연도별 공고에 따라 달라지므로, 신청 전 최신 공고 확인이 필요합니다.
+      </p>
+    </div>
+
+    <div class="filters" id="poolFilters" role="tablist" aria-label="지원사업 분류">
+      <button class="filter is-active" type="button" data-cat="all" role="tab" aria-selected="true">전체</button>
+      <button class="filter" type="button" data-cat="policy" role="tab" aria-selected="false">정책자금</button>
+      <button class="filter" type="button" data-cat="guarantee" role="tab" aria-selected="false">특례보증</button>
+      <button class="filter" type="button" data-cat="support" role="tab" aria-selected="false">지원사업</button>
+      <button class="filter" type="button" data-cat="hire" role="tab" aria-selected="false">고용·세제</button>
+    </div>
+
+    <div class="pool" id="poolList"></div>
+  </div>
+</section>
+
+<!-- ============ 진행 절차 ============ -->
+<section class="section section--dark" id="process">
+  <div class="wrap">
+    <div class="section__head section__head--light reveal">
+      <p class="eyebrow eyebrow--light"><span class="eyebrow__rule"></span>HOW IT WORKS</p>
+      <h2 class="section__title">진단에서 접수까지,<br />한 흐름으로.</h2>
+      <p class="section__desc">
+        아성 AI 비즈패스는 조건 진단과 서류 안내까지 담당하고,
+        실제 신청·접수는 제휴 세무·행정 전문가가 함께합니다.
+      </p>
+    </div>
+
+    <ol class="steps">
+      <li class="step reveal"><span class="step__no">STEP 01</span><h3>조건 입력</h3><p>사업자등록번호·대표자 성별·나이·업종·업력·매출·근로자 수를 입력합니다.</p></li>
+      <li class="step reveal"><span class="step__no">STEP 02</span><h3>1차 진단</h3><p>15종 상품을 실시간 비교해 추천·여성우대·청년우대·검토로 분류합니다.</p></li>
+      <li class="step reveal"><span class="step__no">STEP 03</span><h3>서류 준비</h3><p>공통 서류와 사업별 추가 서류를 체크리스트로 만들고 준비율을 관리합니다.</p></li>
+      <li class="step reveal"><span class="step__no">STEP 04</span><h3>전문가 접수 지원</h3><p>제휴 세무·행정 전문가가 서류 검토와 신청 절차를 함께 진행합니다.</p></li>
+    </ol>
+
+    <div class="process__note reveal">
+      <p>
+        <b>업무 범위 안내</b> — 아성투에버는 자격 진단·필요 서류 안내·제휴 전문가 매칭 및 접수 지원을 제공하며,
+        세무대리·행정대리 등 자격 업무는 제휴 세무사·행정사가 수행합니다.
+      </p>
+      <a class="btn btn--gold btn--sm" href="#diagnose">지금 진단하기</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 상담 ============ -->
+<section class="contact" id="contact">
+  <div class="wrap contact__inner">
+    <div class="contact__copy reveal">
+      <p class="eyebrow eyebrow--light"><span class="eyebrow__rule"></span>CONTACT</p>
+      <h2 class="contact__title">진단 결과,<br />전문가와 함께 확인하세요.</h2>
+      <p class="contact__desc">
+        어떤 자금이 먼저인지, 서류는 무엇부터 준비할지 — 대표 직통으로 바로 안내드립니다.
+      </p>
+    </div>
+    <div class="contact__card reveal">
+      <p class="contact__label">대표 직통 상담</p>
+      <a class="contact__tel" href="tel:01028292837">010-2829-2837</a>
+      <p class="contact__name">유한회사 아성투에버 · 대표 한성욱</p>
+      <div class="contact__btns">
+        <a class="btn btn--gold btn--block" href="tel:01028292837">전화로 상담하기</a>
+        <a class="btn btn--line btn--block" href="#diagnose">진단 후 접수 지원 신청</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <img src="assets/orig-horizontal-dark.png" alt="ASUNG TWOEVER — 유한회사 아성투에버" />
+      <p class="footer__product">아성 AI 비즈패스 <b>BizPass</b></p>
+    </div>
+
+    <div class="footer__info">
+      <dl>
+        <div><dt>상호</dt><dd>유한회사 아성투에버</dd></div>
+        <div><dt>대표</dt><dd>한성욱</dd></div>
+        <div><dt>직통 상담</dt><dd><a href="tel:01028292837">010-2829-2837</a></dd></div>
+      </dl>
+      <nav class="footer__nav" aria-label="푸터 메뉴">
+        <a href="#diagnose">맞춤 진단</a>
+        <a href="#pool">지원사업</a>
+        <a href="#documents">서류·접수</a>
+        <a href="#process">진행 절차</a>
+        <a href="#contact">상담</a>
+      </nav>
+    </div>
+
+    <div class="footer__legal">
+      <p class="footer__notice">
+        현재 버전은 입력 조건 기반 <b>AI 1차 진단</b>이며, 추후 국세청 사업자상태조회·기업마당 공공 API 및
+        전자서류 자동연동(백엔드) 확장이 가능합니다. 한도·금리·지원 비율은 연도별 공고에 따라 변동될 수 있고,
+        최종 수급 여부는 해당 기관의 심사 결과에 따릅니다.
+      </p>
+      <p>
+        세무·회계·노무·법률·행정 관련 서비스는 MOU 제휴 전문가 매칭·연계로 제공되며,
+        아성투에버가 해당 자격 업무를 직접 수행하지 않습니다.
+      </p>
+      <p class="footer__copy">© 2026 ASUNGTWOEVER CO., LTD. AI BizPass. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
