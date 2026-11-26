@@ -123,7 +123,8 @@
       target: "폐업(예정) 소상공인·재창업 희망자",
       cond: { bizAge: ["1to3", "3to7", "over7"], industry: ["food", "retail", "service", "manufacture", "etc", "fishery", "construction"] },
       docs: ["폐업(예정) 확인 서류", "점포 임대차계약서·철거 견적서", "재창업 교육 이수 신청서"],
-      caveat: "폐업 예정이거나 이미 폐업한 사업자만 신청할 수 있습니다."
+      caveat: "폐업 예정이거나 이미 폐업한 사업자만 신청할 수 있습니다.",
+      noReco: true
     },
     {
       id: "export-voucher", cat: "support", catLabel: "지원사업", focus: "general",
@@ -453,10 +454,9 @@
     return { eligible: true, fails: [], reasons: reasons, score: score };
   }
 
-  function badgesFor(p, res, input) {
+  function badgesFor(p, res, input, reco) {
     var out = [];
-    var strong = res.score >= 80 && !p.caveatStrong;
-    out.push({ cls: strong ? "badge--reco" : "badge--check", text: strong ? "추천" : "검토" });
+    out.push({ cls: reco ? "badge--reco" : "badge--check", text: reco ? "추천" : "검토" });
     if (p.focus === "women" && input.gender === "female") out.push({ cls: "badge--women", text: "여성우대" });
     if (p.focus === "youth" && input.age <= 39) out.push({ cls: "badge--youth", text: "청년우대" });
     if (p.focus === "senior" && input.age >= 60) out.push({ cls: "badge--senior", text: "시니어우대" });
@@ -504,19 +504,18 @@
       var res = evaluate(p, input);
       var item = { p: p, res: res };
       if (res.eligible) {
-        item.badges = badgesFor(p, res, input);
-        item.strong = res.score >= 80 && !p.caveatStrong;
         matches.push(item);
       } else {
         excluded.push(item);
       }
     });
 
-    matches.sort(function (a, b) {
-      var ar = (a.badges[0].text === "추천") ? 0 : 1;
-      var br = (b.badges[0].text === "추천") ? 0 : 1;
-      if (ar !== br) return ar - br;
-      return b.res.score - a.res.score;
+    matches.sort(function (a, b) { return b.res.score - a.res.score; });
+    var recoLeft = 3;
+    matches.forEach(function (m) {
+      m.reco = recoLeft > 0 && m.res.score >= 68 && !m.p.noReco;
+      if (m.reco) recoLeft--;
+      m.badges = badgesFor(m.p, m.res, input, m.reco);
     });
     excluded.sort(function (a, b) { return a.p.title.localeCompare(b.p.title); });
 
@@ -525,7 +524,7 @@
     state.selected = {};
 
     /* 추천 상위 2건 기본 선택 */
-    matches.filter(function (m) { return m.badges[0].text === "추천"; })
+    matches.filter(function (m) { return m.reco; })
       .slice(0, 2)
       .forEach(function (m) { state.selected[m.p.id] = true; });
 
@@ -652,7 +651,7 @@
   });
 
   $("#selectAllBtn").addEventListener("click", function () {
-    var targets = state.matches.filter(function (m) { return m.badges[0].text === "추천"; });
+    var targets = state.matches.filter(function (m) { return m.reco; });
     if (!targets.length) targets = state.matches.slice(0, 3);
     var allOn = targets.every(function (m) { return state.selected[m.p.id]; });
     targets.forEach(function (m) {
