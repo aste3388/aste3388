@@ -177,7 +177,7 @@
     },
     {
       id: "local-fund", cat: "policy", catLabel: "정책자금", focus: "general",
-      title: "지자체 중소기업육성자금 이차보전", agency: "광역시·도 / 지역 신용보증재단",
+      title: "광역시·도 중소기업육성자금 이차보전", agency: "광역시·도 / 지역 신용보증재단",
       limit: "시설 최대 10억·운전 최대 5억", limitNote: "대출 이자 일부 보전",
       rate: "이차보전 최대 연 3%(지자체별 상이)",
       target: "수도권 외 광역시·도에 사업장을 둔 중소기업·소상공인",
