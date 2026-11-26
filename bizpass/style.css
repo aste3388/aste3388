@@ -179,7 +179,7 @@ input, select, textarea { font: inherit; color: inherit; }
 }
 .hero__inner { position: relative; display: grid; grid-template-columns: 1.06fr .94fr; gap: 56px; align-items: center; padding-top: 68px; padding-bottom: 56px; }
 .hero__title { margin-top: 20px; font-size: clamp(32px, 4.4vw, 54px); line-height: 1.18; font-weight: 800; letter-spacing: -.035em; word-break: keep-all; }
-.hero__title em { font-style: normal; color: var(--gold); position: relative; }
+.hero__title em { font-style: normal; color: var(--gold); position: relative; white-space: nowrap; }
 .hero__lead { margin-top: 22px; max-width: 560px; font-size: 16px; line-height: 1.85; color: rgba(255, 255, 255, .76); }
 .hero__actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
 .hero__points { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 13px; color: rgba(255, 255, 255, .62); }
