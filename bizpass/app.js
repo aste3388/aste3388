@@ -37,33 +37,43 @@
   var PROGRAMS = [
     {
       id: "youth-startup", cat: "policy", catLabel: "정책자금", focus: "youth",
-      title: "청년전용 창업자금", agency: "소상공인시장진흥공단(소진공)",
-      limit: "최대 1억 원", limitNote: "융자(운전·시설)",
-      rate: "정책자금 기준금리(변동) · 2년 거치 5년 분할",
-      target: "만 39세 이하 예비창업자 또는 업력 3년 미만 소상공인",
+      title: "청년전용창업자금", agency: "중소벤처기업진흥공단(중진공)",
+      limit: "최대 1억 원", limitNote: "제조업·중점분야 2억 원 · 직접대출",
+      rate: "연 2.5% 고정 · 시설 10년·운전 6년(거치 3년)",
+      target: "만 39세 이하 · 업력 3년 미만 중소기업 또는 예비창업자",
       cond: { ageMax: 39, bizAge: ["pre", "lt1", "1to3"] },
-      docs: ["사업계획서(자금 용도·상환 계획)", "창업교육 이수증(해당 시)", "가족관계증명서(청년 연령 확인, 해당 시)"],
-      caveat: "연령·업력 요건과 한도는 연도별 공고에 따라 달라집니다."
+      docs: ["사업계획서(자금 용도·상환 계획)", "최근 결산 재무제표", "사업자등록증명(예비창업자는 등록 예정 확인서)"],
+      caveat: "업력 3년을 넘으면 사관학교·기보 보증 등 예외 요건을 확인해야 합니다."
+    },
+    {
+      id: "youth-employment", cat: "policy", catLabel: "정책자금", focus: "youth",
+      title: "청년고용연계자금", agency: "소상공인시장진흥공단(소진공)",
+      limit: "최대 7천만 원", limitNote: "운전자금 · 대리대출",
+      rate: "정책자금 기준금리 · 5년(거치 2년)",
+      target: "업력 3년 미만 청년 소상공인 또는 청년을 고용·유지 중인 소상공인",
+      cond: { ageMax: 39, bizAge: ["lt1", "1to3"] },
+      docs: ["자금 사용 계획서", "청년 근로자 고용 확인 서류(해당 시)", "매출 증빙"],
+      caveat: "청년 대표·청년 고용 요건 중 1개 이상을 충족해야 합니다."
     },
     {
       id: "growth-fund", cat: "policy", catLabel: "정책자금", focus: "general",
-      title: "성장촉진자금", agency: "소상공인시장진흥공단(소진공)",
-      limit: "최대 1억 원", limitNote: "융자",
-      rate: "정책자금 기준금리(변동) · 2년 거치 5년 분할",
+      title: "성장기반자금(성장유망 소상공인)", agency: "소상공인시장진흥공단(소진공)",
+      limit: "최대 1억 원", limitNote: "운전자금 기준 · 세부 자금별 상이",
+      rate: "기준금리 + 가산금리(사업별) · 5년(거치 2년)",
       target: "성장 가능성이 있는 소상공인 (업력 1년 이상)",
       cond: { bizAge: ["1to3", "3to7", "over7"] },
       docs: ["사업계획서(성장 전략·자금 사용 계획)", "최근 3개년 재무제표(법인)", "매출 증빙 자료"],
-      caveat: "성장성·상환능력 심사가 함께 진행됩니다."
+      caveat: "소공인특화자금 등 세부 자금별로 한도·금리가 다릅니다."
     },
     {
       id: "stable-fund", cat: "policy", catLabel: "정책자금", focus: "general",
       title: "일반경영안정자금", agency: "소상공인시장진흥공단(소진공)",
-      limit: "최대 7천만 원", limitNote: "융자",
-      rate: "정책자금 기준금리(변동) · 1년 거치 4년 분할",
-      target: "매출 감소·경영 애로를 겪는 소상공인",
+      limit: "연간 최대 7천만 원", limitNote: "운전자금 · 대리대출",
+      rate: "기준금리 + 0.6%p · 5년(거치 2년)",
+      target: "업력과 관계없이 지원되는 소상공인 일반 자금",
       cond: { bizAge: ["lt1", "1to3", "3to7", "over7"] },
       docs: ["자금 사용 계획서", "최근 1년 매출 증빙", "매출 감소 확인 자료(해당 시)"],
-      caveat: "사업자등록 후 일정 기간이 지나야 신청할 수 있습니다."
+      caveat: "사업자등록 후 일정 기간이 지나야 신청할 수 있고, 융자제외 업종이 있습니다."
     },
     {
       id: "local-guarantee", cat: "guarantee", catLabel: "특례보증", focus: "general",
@@ -98,17 +108,17 @@
     {
       id: "smart-store", cat: "support", catLabel: "지원사업", focus: "general",
       title: "스마트상점 기술보급사업", agency: "중소벤처기업부·소상공인시장진흥공단",
-      limit: "최대 3,000만 원 규모", limitNote: "지원 50~70% · 자부담 있음",
-      rate: "키오스크·POS·서빙로봇 등 기술 도입",
-      target: "외식·도소매·서비스 업종의 매장 운영 소상공인",
+      limit: "구입형 최대 500만 원", limitNote: "배리어프리 포함 700만 원 · 렌탈 연 350만 원",
+      rate: "국비 50~70% (우대 60~80%) · 자부담 있음",
+      target: "정상 영업 중인 점포를 둔 소상공인 (외식·도소매·서비스)",
       cond: { industry: ["food", "retail", "service"] },
-      docs: ["스마트기기 도입 견적서", "매장 사진", "사업계획서(기술 도입 효과)"],
-      caveat: "연도별 예산·품목에 따라 지원 규모가 달라집니다."
+      docs: ["스마트기기 도입 견적서", "매장 사진", "사업자등록증명(소상공인확인서)"],
+      caveat: "연도별 예산·지원 품목에 따라 한도가 달라지고, 부가세는 자부담입니다."
     },
     {
       id: "online-sales", cat: "support", catLabel: "지원사업", focus: "general",
       title: "소상공인 온라인판로(O2O·라이브커머스)", agency: "소상공인시장진흥공단",
-      limit: "최대 500만 원 상당", limitNote: "입점·콘텐츠 제작 지원",
+      limit: "사업별 최대 500만 원 상당", limitNote: "입점·콘텐츠 제작 지원",
       rate: "자부담 10~30%(사업별)",
       target: "온라인 판매 채널을 새로 열려는 소상공인",
       cond: { industry: ["food", "retail", "manufacture", "service", "fishery"] },
@@ -118,12 +128,12 @@
     {
       id: "hope-return", cat: "support", catLabel: "지원사업", focus: "general",
       title: "희망리턴패키지(폐업·재창업)", agency: "중소벤처기업부·소상공인시장진흥공단",
-      limit: "점포철거비 최대 250만 원", limitNote: "재창업 교육·컨설팅 병행",
-      rate: "비용 보조 + 무료 교육",
+      limit: "점포철거비 최대 600만 원", limitNote: "3.3㎡당 20만 원 이내",
+      rate: "사업정리 컨설팅·법률자문·채무조정 병행",
       target: "폐업(예정) 소상공인·재창업 희망자",
-      cond: { bizAge: ["1to3", "3to7", "over7"], industry: ["food", "retail", "service", "manufacture", "etc", "fishery", "construction"] },
+      cond: { bizAge: ["1to3", "3to7", "over7"] },
       docs: ["폐업(예정) 확인 서류", "점포 임대차계약서·철거 견적서", "재창업 교육 이수 신청서"],
-      caveat: "폐업 예정이거나 이미 폐업한 사업자만 신청할 수 있습니다.",
+      caveat: "폐업 예정이거나 이미 폐업한 사업자만 신청할 수 있고, 접수 기간·예산 소진 여부를 확인해야 합니다.",
       noReco: true
     },
     {
@@ -132,24 +142,24 @@
       limit: "최대 1억 원", limitNote: "자부담 10~30%",
       rate: "홍보·인증·물류·바이어 매칭 서비스 이용권",
       target: "수출을 준비하거나 확대하려는 중소기업·소상공인",
-      cond: { industry: ["manufacture", "retail", "food", "service", "fishery", "etc"], salesMax: 99 },
+      cond: { industry: ["manufacture", "retail", "food", "service", "fishery", "etc"] },
       docs: ["수출 역량 자체 진단서", "수출 계획서", "최근 매출·수출 실적 증빙", "중소기업 확인서"],
       caveat: "수출 실적·역량 평가로 선정되며, 수행기관 계약이 필요합니다."
     },
     {
       id: "youth-job", cat: "hire", catLabel: "고용·세제", focus: "youth",
       title: "청년일자리도약장려금", agency: "고용노동부·고용센터",
-      limit: "1인당 최대 1,080만 원", limitNote: "2년 분할 지급",
-      rate: "청년 1명 채용 시 월 단위 지원",
-      target: "취업애로청년(만 15~34세)을 정규직으로 채용한 사업장",
-      cond: {},
+      limit: "1인당 최대 720만 원", limitNote: "월 60만 원 × 12개월",
+      rate: "정규직 채용 후 6개월 이상 고용 유지 시",
+      target: "5인 이상 우선지원대상기업이 취업애로청년을 채용한 경우",
+      cond: { workersMin: 5 },
       docs: ["청년 근로자 근로계약서", "4대보험 가입 확인서", "임금대장", "취업애로청년 확인 서류"],
-      caveat: "채용 시점·청년 요건(고졸·장기실업 등) 확인이 필요합니다."
+      caveat: "청년창업기업 등은 1인 이상도 가능하며, 비수도권은 별도 우대 지원이 있습니다."
     },
     {
       id: "senior-hire", cat: "hire", catLabel: "고용·세제", focus: "senior",
       title: "고령자 계속고용장려금", agency: "고용노동부·고용센터",
-      limit: "1인당 월 최대 30만 원", limitNote: "지원 기간 사업장 규모별 상이",
+      limit: "1인당 월 최대 30만 원", limitNote: "지원 기간은 사업장 규모별 상이",
       rate: "60세 이상 근로자 계속 고용 시",
       target: "정년 이후 근로자를 계속 고용하는 사업장",
       cond: { workersMax: 300 },
@@ -159,12 +169,12 @@
     {
       id: "social-insurance", cat: "hire", catLabel: "고용·세제", focus: "general",
       title: "두루누리 사회보험료 지원", agency: "근로복지공단·국민연금공단",
-      limit: "보험료의 최대 80%", limitNote: "신규 가입 근로자 기준",
-      rate: "월 보수 270만 원 미만 근로자",
-      target: "10명 미만 사업장의 저소득 근로자",
+      limit: "보험료의 80%", limitNote: "근로자 1인당 월 상한액 있음",
+      rate: "월 보수 270만 원 미만 신규가입 근로자",
+      target: "10명 미만 사업장의 저소득 신규가입 근로자",
       cond: { workersMax: 9 },
       docs: ["4대보험 가입 신청서", "근로계약서", "사업자등록증 사본"],
-      caveat: "지원 인원·기간은 연도별 기준에 따라 달라집니다."
+      caveat: "신규가입자 기준이며 최대 36개월까지 지원됩니다."
     },
     {
       id: "gyeonggi-fund", cat: "policy", catLabel: "정책자금", focus: "general",
@@ -175,16 +185,6 @@
       cond: { region: ["metro"] },
       docs: ["경기도 중소기업육성자금 신청서", "사업계획서", "재무제표·매출 증빙", "지방세 납세증명서"],
       caveat: "경기도 소재 사업장만 신청할 수 있으며, 타 지역은 해당 지자체 자금으로 안내합니다."
-    },
-    {
-      id: "local-fund", cat: "policy", catLabel: "정책자금", focus: "general",
-      title: "광역시·도 중소기업육성자금 이차보전", agency: "광역시·도 / 지역 신용보증재단",
-      limit: "시설 최대 10억·운전 최대 5억", limitNote: "대출 이자 일부 보전",
-      rate: "이차보전 최대 연 3%(지자체별 상이)",
-      target: "수도권 외 광역시·도에 사업장을 둔 중소기업·소상공인",
-      cond: { region: ["city", "province", "jeju"] },
-      docs: ["지자체 융자 신청서", "사업계획서", "재무제표·매출 증빙", "지방세 납세증명서"],
-      caveat: "관할 지자체의 연간 자금 공고와 접수 기간을 확인해야 합니다."
     }
   ];
 
@@ -424,6 +424,9 @@
     if (c.workersMax != null && Number(input.workers) > c.workersMax) {
       fails.push("상시근로자 " + WORKERS[input.workers] + " — " + c.workersMax + "명 이하 사업장 대상입니다.");
     }
+    if (c.workersMin != null && Number(input.workers) < c.workersMin) {
+      fails.push("상시근로자 " + WORKERS[input.workers] + " — " + c.workersMin + "명 이상 사업장 대상입니다.");
+    }
     if (c.salesMax != null && Number(input.sales) > c.salesMax) {
       fails.push("연매출 " + SALES[input.sales] + " — " + c.salesMax + "억 원 이하 대상입니다.");
     }
@@ -437,6 +440,7 @@
     if (c.industry) reasons.push(INDUSTRY[input.industry] + " 업종이 지원 대상에 포함됩니다.");
     if (c.region) reasons.push(REGION[input.region] + " 사업장 — 지역 요건을 충족합니다.");
     if (c.workersMax != null) reasons.push("상시근로자 " + WORKERS[input.workers] + " — " + c.workersMax + "명 이하 요건을 충족합니다.");
+    if (c.workersMin != null) reasons.push("상시근로자 " + WORKERS[input.workers] + " — " + c.workersMin + "명 이상 요건을 충족합니다.");
     if (c.salesMax != null) reasons.push("연매출 " + SALES[input.sales] + " — " + c.salesMax + "억 원 이하 요건을 충족합니다.");
     if (!reasons.length) reasons.push("업종·업력 제한이 없는 전국 공통 상품입니다.");
 
@@ -447,6 +451,7 @@
     if (c.industry) score += 6;
     if (c.region) score += 6;
     if (c.workersMax != null) score += 5;
+    if (c.workersMin != null) score += 5;
     if (c.salesMax != null) score += 5;
     if (focusMatch(p, input)) score += 8;
     score = Math.max(55, Math.min(97, score));
@@ -906,6 +911,7 @@
     if (c.industry) out.push(c.industry.map(function (k) { return INDUSTRY[k].replace("·", ""); }).join("·"));
     if (c.region) out.push(c.region.map(function (k) { return REGION[k]; }).join("·") + " 사업장");
     if (c.workersMax != null) out.push("근로자 " + c.workersMax + "명 이하");
+    if (c.workersMin != null) out.push("근로자 " + c.workersMin + "명 이상");
     if (c.salesMax != null) out.push("연매출 " + c.salesMax + "억 원 이하");
     return out.length ? out.join(" / ") : "업종·지역 제한 없음";
   }
