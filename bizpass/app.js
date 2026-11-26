@@ -544,12 +544,13 @@
   }
 
   function setStep(n) {
-    for (var i = 1; i <= 3; i++) {
-      var el = $("#stepper" + i);
-      if (!el) continue;
-      el.classList.toggle("is-active", i === n);
-      el.classList.toggle("is-done", i < n);
-    }
+    $$(".stepper").forEach(function (st) {
+      $$(".stepper__item", st).forEach(function (el) {
+        var i = Number(el.getAttribute("data-step"));
+        el.classList.toggle("is-active", i === n);
+        el.classList.toggle("is-done", i < n);
+      });
+    });
   }
 
   /* ---------------------------------------------------------------
